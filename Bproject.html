@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennis 🎾</title>
+    <style>
+      body {
+        background: linear-gradient(
+          106.5deg,
+          rgba(255, 215, 185, 0.91) 23%,
+          rgba(223, 159, 247, 0.8) 93%
+        );
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 2px solid plum;
+        background: white;
+        font-size: 20px;
+        border-radius: 8px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+      button :hover {
+        background: plum;
+        cursor: pointer;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      .changebutton {
+        font-size: 10px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+      .changebutton:hover {
+        background: white;
+        color: black;
+      }
+      .intropic {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .intropic:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+        transition: scale(1.1);
+      }
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        transform: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: normal;
+        text-align: justify;
+      }
+      .dark {
+        background: linear-gradient(
+          109.6deg,
+          rgb(36, 45, 57) 11.2%,
+          rgb(16, 37, 60) 51.2%,
+          rgb(0, 0, 0) 98.6%
+        );
+        color: white;
+      }
+      .dark .container {
+        background: rgb(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="changebutton">Change theme</button>
+    <div class="container">
+      <h1>🎾Tennis🎾</h1>
+      <h2>What is tennis all about?</h2>
+      <a href="https://en.wikipedia.org/wiki/Tennis" target="_blank">
+        <img
+          src="https://getwallpapers.com/wallpaper/full/3/c/5/383099.jpg"
+          alt
+          class="intropic"
+      /></a>
+      <div class="grid">
+        <img
+          src="https://img.buzzfeed.com/buzzfeed-static/static/2018-08/28/15/asset/buzzfeed-prod-web-02/sub-buzz-29931-1535485539-8.jpg"
+          alt
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/136/original/1200-19789162-playing-tennis.jpg?1720875465"
+          alt
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/135/original/16640851141907.jpg?1720875453"
+          alt
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/134/original/playing-tennis.jpg?1720875438"
+          alt
+        />
+      </div>
+      <p>
+        Tennis is a popular racket sport played on a rectangular court with a
+        net in the middle. It can be played in singles (one player on each side)
+        or doubles (two players on each side). The objective is to hit the ball
+        over the net into the opponent's court in such a way that the opponent
+        cannot return it successfully. Players score points by winning rallies,
+        and matches are typically played in best-of-three or best-of-five sets.
+        The sport requires a combination of physical fitness, skill, strategy,
+        and mental toughness. Major tournaments include the Grand Slam events:
+        the Australian Open, French Open, Wimbledon, and the US Open.
+        <br />
+        <br />
+        📖<a href="https://en.wikipedia.org/wiki/Tennis" target="_blank">
+          <strong>Read more on wikipedia</strong></a
+        >
+      </p>
+      <button class="moreinfo">Learn more</button>
+    </div>
+    <footer>coded with ❤ by Oratile M</footer>
+    <script>
+      function changetheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+      let themebutton = document.querySelector(".changebutton");
+      themebutton.addEventListener("click", changetheme);
+
+      function info() {
+        let name = prompt("Enter your full names:");
+        let email = prompt("Enter your email:");
+
+        alert(
+          "hey " +
+            name +
+            " more infomation will be sent to your " +
+            email +
+            " email address!"
+        );
+      }
+      let infobutton = document.querySelector(".moreinfo");
+      infobutton.addEventListener("click", info);
+    </script>
+  </body>
+</html>
